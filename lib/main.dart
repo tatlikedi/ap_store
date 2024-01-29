@@ -7,6 +7,8 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
+  final PageController controller = PageController(initialPage: 0);
+
   //void main gibi Widget build de sabittir değiştirilemez
   //Bir şey ekrana çizilecekse mutlaka bu fonksiyona bakar ve çalışabilmesi
   //için parametre olarak bir bağlam (context) alması gerekir! BuildContext bir türdür.
@@ -113,43 +115,147 @@ class MyApp extends StatelessWidget {
             SingleChildScrollView(
               //alttaki satır ile yatay eksende kaymasını sağlarız.
               scrollDirection: Axis.horizontal,
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
               child: Row(
                 children: [
                   Column(
                     children: [
-                      Image(image: AssetImage('varliklar/fashion.png')),
-                      Text("Fashion"),
+                      Padding(
+                        padding: EdgeInsets.only(bottom: 10.0),
+                        child: Image(
+                          image: AssetImage('varliklar/fashion.png'),
+                          height: 80,
+                          width: 80,
+                        ),
+                      ),
+                      Text(
+                        'Fashion',
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          color: Color(0xFF1F2937),
+                          fontSize: 12,
+                          fontFamily: 'Inter',
+                          fontWeight: FontWeight.w400,
+                          height: 0.12,
+                        ),
+                      )
                     ],
+                  ),
+                  SizedBox(
+                    width: 20,
                   ),
                   Column(
                     children: [
-                      Image(image: AssetImage('varliklar/electronics.png')),
-                      Text("Electronics"),
+                      Padding(
+                        padding: EdgeInsets.only(bottom: 10.0),
+                        child: Image(
+                          image: AssetImage('varliklar/electronics.png'),
+                          height: 80,
+                          width: 80,
+                        ),
+                      ),
+                      Text(
+                        'Electronics',
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          color: Color(0xFF1F2937),
+                          fontSize: 12,
+                          fontFamily: 'Inter',
+                          fontWeight: FontWeight.w400,
+                          height: 0.12,
+                        ),
+                      )
                     ],
+                  ),
+                  SizedBox(
+                    width: 20,
                   ),
                   Column(
                     children: [
-                      Image(image: AssetImage('varliklar/app.png')),
-                      Text("Appliances"),
+                      Padding(
+                        padding: EdgeInsets.only(bottom: 10.0),
+                        child: Image(
+                          image: AssetImage('varliklar/app.png'),
+                          height: 80,
+                          width: 80,
+                        ),
+                      ),
+                      Text(
+                        'Appliances',
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          color: Color(0xFF1F2937),
+                          fontSize: 12,
+                          fontFamily: 'Inter',
+                          fontWeight: FontWeight.w400,
+                          height: 0.12,
+                        ),
+                      )
                     ],
+                  ),
+                  SizedBox(
+                    width: 20,
                   ),
                   Column(
                     children: [
-                      Image(image: AssetImage('varliklar/beauty.png')),
-                      Text("Beauty"),
+                      Padding(
+                        padding: EdgeInsets.only(bottom: 10.0),
+                        child: Image(
+                          image: AssetImage('varliklar/beauty.png'),
+                          height: 80,
+                          width: 80,
+                        ),
+                      ),
+                      Text(
+                        'Beauty',
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          color: Color(0xFF1F2937),
+                          fontSize: 12,
+                          fontFamily: 'Inter',
+                          fontWeight: FontWeight.w400,
+                          height: 0.12,
+                        ),
+                      )
                     ],
+                  ),
+                  SizedBox(
+                    width: 20,
                   ),
                   Column(
                     children: [
-                      Image(image: AssetImage('varliklar/furniture.png')),
-                      Text("Furniture"),
+                      Padding(
+                        padding: EdgeInsets.only(bottom: 10.0),
+                        child: Image(
+                          image: AssetImage('varliklar/Furniture.png'),
+                          height: 80,
+                          width: 80,
+                        ),
+                      ),
+                      Text(
+                        'Furniture',
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          color: Color(0xFF1F2937),
+                          fontSize: 12,
+                          fontFamily: 'Inter',
+                          fontWeight: FontWeight.w400,
+                          height: 0.12,
+                        ),
+                      )
                     ],
+                  ),
+                  SizedBox(
+                    width: 20,
                   ),
                 ],
               ),
             ),
+
+            SizedBox(height: 30),
           ],
         ),
+
         //Drawer widgetı tıklandığında veya sürüklendiğinde sağ taraftan menü açılmasını sağlar
         drawer: const Drawer(),
       ),
